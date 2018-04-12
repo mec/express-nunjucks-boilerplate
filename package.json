@@ -1,0 +1,50 @@
+{
+  "name": "express-nunjucks-app",
+  "version": "1.0.0",
+  "description": "",
+  "entry": "app.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "npx browser-sync start --no-ui -p localhost:4000 -f 'views' 'routes' 'app.js' & npx nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "express-generator": "^4.16.0",
+    "nodemon": "^1.17.2"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "semi": [
+        2,
+        "always"
+      ],
+      "no-extra-semi": 2,
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "nodemonConfig": {
+    "ext": "njk, js"
+  }
+}
